@@ -7,6 +7,7 @@ public class flag_logic : MonoBehaviour
     public GameObject player;
     Vector2 start_pos;
     public bool reset = false;
+    public bool finished = false;
     private void Start()
     {
         start_pos = player.transform.position;
@@ -17,9 +18,11 @@ public class flag_logic : MonoBehaviour
     {
         if (reset) { resetLevel(); };
         reset = false;
+        finished = false;
     }
     void OnTriggerEnter2D(Collider2D hit)
     {
+        finished = true;
         Debug.Log("hi");
         resetLevel();
     }

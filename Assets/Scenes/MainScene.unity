@@ -300,11 +300,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 108482822354416309, guid: a3de17333f987be45905560108574607, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.35244274
+      value: 15.32089
       objectReference: {fileID: 0}
     - target: {fileID: 108482822354416309, guid: a3de17333f987be45905560108574607, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.0534444
+      value: -6.405352
       objectReference: {fileID: 0}
     - target: {fileID: 108482822354416309, guid: a3de17333f987be45905560108574607, type: 3}
       propertyPath: m_LocalPosition.z
@@ -346,6 +346,34 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 578951606}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: resetLevelH.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: resetLevelH.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: resetLevelH.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1745376726}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: resetLevelH.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: resetLevelH.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: newLevels
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: resetLevelH.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: levelSpawner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: resetLevelH.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -361,11 +389,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3132863803827955830, guid: 746a80ee6aced8740a023364c89f6911, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4940076
+      value: 0.29989862
       objectReference: {fileID: 0}
     - target: {fileID: 3132863803827955830, guid: 746a80ee6aced8740a023364c89f6911, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.365032
+      value: -4.453372
       objectReference: {fileID: 0}
     - target: {fileID: 3132863803827955830, guid: 746a80ee6aced8740a023364c89f6911, type: 3}
       propertyPath: m_LocalPosition.z

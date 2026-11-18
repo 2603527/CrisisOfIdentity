@@ -1,57 +1,77 @@
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
+    private float jumpHeight = 9f;
+    private float moveSpeed = 5f;
+
+    public Sprite idleSprite;
+    public Sprite runSprite;
+    public Sprite jumpSprite;
+    private SpriteRenderer sprite;
+    private Rigidbody2D rb;
+    private Collider2D playerCollider;
+
     void Start()
     {
-        
-    }
-     
-
-    private float jumpPos = 0f;
-
-    private float getSpeed()
-    {
-        return 150f;
-    }
-    private float getJumpHeight()
-    {
-        return 140f;
+        // Declare player component vars
+        rb = GetComponent<Rigidbody2D>();
+        playerCollider = GetComponent<Collider2D>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
-    private GameObject getPlayer()
+    private Rigidbody2D[] surfaces()
     {
-        return GameObject.FindWithTag("Player");
-    }
-    private GameObject getGround()
-    {
-        return GameObject.FindWithTag("Ground");
+        return FindObjectsByType<Rigidbody2D>();
     }
 
-    private bool onGround()
+    // Check if the player is standing on a surface
+    private bool grounded()
     {
-        return getPlayer().GetComponent<Collider2D>().IsTouching(getGround().GetComponent<Collider2D>());
+        foreach (Rigidbody2D floor in surfaces())
+        {
+            Collider2D floorCollider = floor.GetComponent<Collider2D>();
+
+            if (floorCollider != null &&
+                playerCollider.IsTouching(floorCollider))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     void Update()
     {
-        if (jumpPos > 0 && Mathf.Abs(getGround().transform.position.y - transform.position.y) != jumpPos)
-        {
-            print(Mathf.Abs(getGround().transform.position.y - transform.position.y));
-            transform.position += new Vector3(0, 1, 0);
-        } else
-        {
-            jumpPos = 0;
-        }
-       //     transform.position += new Vector3(0, jumpSpeed, 0);
-       // jumpSpeed = Mathf.Max(0, jumpSpeed-1); 
-        
-        if (onGround() && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)))
-        {
-            jumpPos = 20f;
+        float moveDirection = 0f;
+        // Check where player is moving
+        bool movingLeft = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A);
+        bool movingRight = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D);
+        bool movingUp = (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space));
 
-            //transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(0, getJumpHeight(), 0), getSpeed() * Time.deltaTime); 
+        // Update sprite based on movement
+        if (!grounded() && jumpSprite) sprite.sprite = jumpSprite;
+        else if ((movingLeft || movingRight) && runSprite) sprite.sprite = runSprite;
+        else if (idleSprite) sprite.sprite = idleSprite;
+
+        if (movingLeft) moveDirection = -1f;
+        if (movingRight) moveDirection = 1f;
+
+        // Set linear velocity of rigidbody using move speed
+        rb.linearVelocity = new Vector2(
+            moveDirection * moveSpeed,
+            rb.linearVelocity.y
+        );
+
+        // Move player up if jumping & grounded
+        if (movingUp && grounded())
+        {
+            rb.linearVelocity = new Vector2(
+                rb.linearVelocity.x,
+                jumpHeight
+            );
         }
+
     }
 }
-

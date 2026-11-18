@@ -8,6 +8,7 @@ public class flag_logic : MonoBehaviour
     public GameObject player;
     Vector2 start_pos;
     public UnityEvent resetLevelH;
+    public UnityEvent finishLevelH;
     public bool finished = false;
     private void Start()
     {
@@ -16,7 +17,7 @@ public class flag_logic : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hit)
     {
-        finished = true;
+        finishLevelH.Invoke();
         resetLevel();
     }
 

@@ -1,16 +1,22 @@
 using UnityEngine;
+using System.Collections;
 
-public class doorLogic : MonoBehaviour
+public class DoorLogic : MonoBehaviour
 {
-
+    private float openSpeed = 1f;
     public void openDoor()
     {
-        Debug.Log("hi");
-        Destroy(this.gameObject);
+        StartCoroutine(SlideDoorOpen());
     }
-    // Update is called once per frame
-    void Update()
+
+    IEnumerator SlideDoorOpen()
     {
-        
+        Vector3 target = transform.position - new Vector3(0, 10, 0);
+
+        while (Vector3.Distance(transform.position, target) > 0.01f)
+        {
+            transform.position = Vector3.Lerp(transform.position, target, Time.deltaTime * openSpeed);
+            yield return null;
+        }
     }
 }

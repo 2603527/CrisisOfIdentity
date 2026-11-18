@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class buttonLogic : MonoBehaviour
+public class ButtonLogic : MonoBehaviour
 {
-    public doorLogic door;
+    public DoorLogic door;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Crate")
+        if (collision.tag == "Crate")
         {
             door.openDoor();
         };

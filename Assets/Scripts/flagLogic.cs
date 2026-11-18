@@ -2,29 +2,19 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class flag_logic : MonoBehaviour
+public class flagLogic : MonoBehaviour
 {
-    public GameObject[] objects;
-    public GameObject player;
-    Vector2 start_pos;
-    public UnityEvent resetLevelH;
-    public UnityEvent finishLevelH;
-    public bool finished = false;
-    private void Start()
+    public levelSpawner level;
+    public UnityEvent finishLevel;
+
+    void Start()
     {
-        start_pos = player.transform.position;
+        level = GameObject.FindAnyObjectByType<levelSpawner>();
     }
 
     void OnTriggerEnter2D(Collider2D hit)
     {
-        finishLevelH.Invoke();
-        resetLevel();
-    }
-
-    public void resetLevel()
-    {
-        resetLevelH.Invoke();
-        finished = false;
-        player.transform.position = start_pos;
+        finishLevel.Invoke();
+        level.resetLevel();
     }
 }

@@ -2,14 +2,18 @@ using UnityEngine;
 
 public class levelSpawner : MonoBehaviour
 {
-    public float stages = 5;
+    private float stages = 5;
 
     GameObject temp;
     public GameObject[] scenes;
-    public flag_logic flag;
-    
+    private flagLogic flag;
+    public GameObject player;
+    Vector2 start_pos;
+
     void Start()
     {
+        flag = GameObject.FindAnyObjectByType<flagLogic>();
+        start_pos = player.transform.position;
         temp = new GameObject();
         stages = flag.transform.position.x / 10;
         newLevels();
@@ -29,5 +33,11 @@ public class levelSpawner : MonoBehaviour
             newScene.transform.SetParent(temp.transform, false);
             x_pos += 10;
         }
+    }
+
+    public void resetLevel()
+    {
+        newLevels();
+        player.transform.position = start_pos;
     }
 }

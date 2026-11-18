@@ -2,16 +2,19 @@ using UnityEngine;
 
 public class object_logic : MonoBehaviour
 {
-    private flag_logic flag;
+    private levelSpawner level;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        flag = GameObject.FindAnyObjectByType<flag_logic>();
+        level = GameObject.FindAnyObjectByType<levelSpawner>();
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        flag.resetLevel();
+        if(collision.tag == "Player")
+        {
+            level.resetLevel();
+        }
     }
 }

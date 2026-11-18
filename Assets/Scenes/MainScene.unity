@@ -794,12 +794,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4149115313dec4fa13d5d9ba77b1cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  stages: 5
   scenes:
   - {fileID: 3396821068383891886, guid: 14fdb66ea8cc23b44b76b72364fb3d41, type: 3}
   - {fileID: 3396821068383891886, guid: af13eb70e8316f3409fafc35a62522e4, type: 3}
   - {fileID: 3396821068383891886, guid: d0632cfeea1a1e74a87e4103acfc8623, type: 3}
-  flag: {fileID: 1060775828}
+  player: {fileID: 578951606}
 --- !u!4 &1745376727
 Transform:
   m_ObjectHideFlags: 0
@@ -872,11 +871,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 578951606}
     - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: finishLevel.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
       propertyPath: resetLevelH.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
       propertyPath: finishLevelH.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: finishLevel.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
@@ -892,6 +899,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: finishLevel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 578951621}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
       propertyPath: resetLevelH.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1745376726}
@@ -904,12 +915,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 578951621}
     - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: finishLevel.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
       propertyPath: resetLevelH.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
       propertyPath: resetLevelH.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: finishLevel.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: add_score
       objectReference: {fileID: 0}
     - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
       propertyPath: finishLevelH.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -928,6 +947,10 @@ PrefabInstance:
       value: add_score
       objectReference: {fileID: 0}
     - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: finishLevel.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: scoretracker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
       propertyPath: resetLevelH.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: levelSpawner, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -938,6 +961,10 @@ PrefabInstance:
     - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
       propertyPath: finishLevelH.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: scoretracker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
+      propertyPath: finishLevel.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1477195868714175124, guid: a3de17333f987be45905560108574607, type: 3}
       propertyPath: resetLevelH.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

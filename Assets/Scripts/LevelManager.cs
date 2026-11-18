@@ -19,12 +19,8 @@ public class LevelManager : MonoBehaviour
         score++;
     }
 
-    public void loadLevel()
-    {
-        resetLevel();
-    }
 
-    public void resetLevel()
+    public void loadLevel()
     {
         float x_pos = 0.0f;
         Destroy(temp);

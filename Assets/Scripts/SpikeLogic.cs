@@ -12,7 +12,7 @@ public class SpikeLogic : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            levelManager.resetLevel();
+            levelManager.loadLevel();
         }
     }
 }

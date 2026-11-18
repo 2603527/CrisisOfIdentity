@@ -861,7 +861,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9114789695211296444, guid: f6e9e393d4780e34f8fafd9ae2de7673, type: 3}
+  m_Sprite: {fileID: -4364034832326165938, guid: ca2fe37bd97dd8b409ebb0ba898ea39d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -881,8 +881,8 @@ Transform:
   m_GameObject: {fileID: 1346503610}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0592, y: -0.0521, z: 0}
-  m_LocalScale: {x: 1.9136992, y: 1.5548228, z: 1}
+  m_LocalPosition: {x: -0.8848, y: -0.7281, z: 0}
+  m_LocalScale: {x: 1.0416737, y: 0.8981655, z: 0.4756004}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1054,7 +1054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 111.11359}
+  m_AnchoredPosition: {x: 2.7, y: 140.1}
   m_SizeDelta: {x: 312.5121, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1610373975
@@ -1077,17 +1077,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ball Minimum
+  m_text: Crisis of Identity
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 3009635264
+  m_fontColor: {r: 0.754717, g: 0.38803846, b: 0.38803846, a: 0.7019608}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 67
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535

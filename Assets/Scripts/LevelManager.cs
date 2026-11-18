@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
     GameObject temp;
     public GameObject[] scenes;
     public GameObject player;
-    
+    public UnityEvent leveldone;
     void Start()
     {
         temp = new GameObject();
@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
     public void increaseScore()
     {
         score++;
+        leveldone.Invoke();
     }
 
 

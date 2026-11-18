@@ -151,8 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d34ffa5292ad3a4083d9831f7ab649b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  target: {fileID: 578951611}
-  offset: {x: 0, y: 5, z: -10}
 --- !u!114 &473148821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,6 +371,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3132863803827955830, guid: 746a80ee6aced8740a023364c89f6911, type: 3}
   m_PrefabInstance: {fileID: 8657127837397588973}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &578951612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578951606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933e2ebd473a43b4e9cb0483756f0345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::scoreTracker
+  scoredisplay: {fileID: 1811081500}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +524,21 @@ MonoBehaviour:
   - {fileID: 3396821068383891886, guid: af13eb70e8316f3409fafc35a62522e4, type: 3}
   - {fileID: 3396821068383891886, guid: d0632cfeea1a1e74a87e4103acfc8623, type: 3}
   player: {fileID: 578951606}
+  leveldone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 578951612}
+        m_TargetAssemblyTypeName: scoreTracker, Assembly-CSharp
+        m_MethodName: add_score
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!4 &1745376727
 Transform:
   m_ObjectHideFlags: 0
@@ -528,6 +554,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1811081500 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3751337110622523696, guid: 746a80ee6aced8740a023364c89f6911, type: 3}
+  m_PrefabInstance: {fileID: 8657127837397588973}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1884048204
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +811,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3751337110622523696, guid: 746a80ee6aced8740a023364c89f6911, type: 3}
+      propertyPath: m_text
+      value: 'Score: 0'
+      objectReference: {fileID: 0}
     - target: {fileID: 5552320226558622131, guid: 746a80ee6aced8740a023364c89f6911, type: 3}
       propertyPath: m_Size.x
       value: 0.12833405
@@ -818,13 +859,17 @@ PrefabInstance:
       propertyPath: jumpSprite
       value: 
       objectReference: {fileID: -3608701682692697620, guid: 7f10f1147c447104a84660be18969dd9, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 571241081747327457, guid: 746a80ee6aced8740a023364c89f6911, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3132863803827955830, guid: 746a80ee6aced8740a023364c89f6911, type: 3}
       insertIndex: -1
       addedObject: {fileID: 473148824}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5621994913997202849, guid: 746a80ee6aced8740a023364c89f6911, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 578951612}
   m_SourcePrefab: {fileID: 100100000, guid: 746a80ee6aced8740a023364c89f6911, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
